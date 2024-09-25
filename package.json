@@ -38,6 +38,8 @@
       "e2e": {
         "stepDefinitions": "cypress/support/step_definitions/**/*.{js}"
       },
+      "onGlobalStepDefinitions": false,
+      "step_definitions": "cypress/e2e/Tests",
       "filePrefix": "",
       "fileSuffix": ".cucumber"
     }
