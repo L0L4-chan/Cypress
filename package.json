@@ -13,6 +13,11 @@
     "@cucumber/cucumber": "^11.0.1",
     "@types/chai": "^5.0.0",
     "@types/cucumber": "^6.0.1",
-    "cypress": "^13.14.2"
+    "cypress": "^13.14.2",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  }, 
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/e2e/Tests"
   }
 }
