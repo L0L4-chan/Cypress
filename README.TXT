@@ -50,29 +50,20 @@ open a terminal in Visual studio Code and run
 
 After this review the dependencies file (package.json)
 and add some lines
-  {
-  "name": "cucumber_cypress",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "@cucumber/cucumber": "^11.0.1",
-    "@types/chai": "^5.0.0",
-    "@types/cucumber": "^6.0.1",
-    "cypress": "^13.14.2",
-    "cypress-cucumber-preprocessor": "^4.3.1"
-  }, 
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": false,
-    "step_definitions": "cypress/e2e/Tests"
-  }
-}
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filterSpecs": true,
+      "omitFiltered": true,
+      "e2e": {
+        "stepDefinitions": "cypress/support/step_definitions/**/*.{js}"
+      },
+      "onGlobalStepDefinitions": false,
+      "step_definitions": "cypress/e2e/Tests",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
 run npm update and fixed any warning by updating packages 
 
 To open Cypress run
@@ -82,3 +73,25 @@ To open Cypress run
   siguiendo tutorial de https://testgrid.io/blog/cypress-with-cucumber/
   
   
+  
+  Creamos proyecto
+npm init -y       //creamos package.json 
+
+Installar Cypress
+npm install cypress --save-dev  // crea package-lock.json
+npm install --save-dev cypress-cucumber-preprocessor
+
+
+
+git init
+git add .
+git commit -m "Initial commit"
+git config --global user.email "gaiafwfg@gmail.com"
+git config --global user.name "L0L4-chan"
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/L0L4-chan/Cypress.git
+git branch -M main
+git remote add origin https://github.com/L0L4-chan/Cypress.git
+git branch -M main
+
