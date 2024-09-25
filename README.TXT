@@ -41,7 +41,7 @@ Open Visual Studio and select open folder (Project)
 open a terminal in Visual studio Code and run
   -npm init -y
   -npm install cypress --save-dev
-  - npm install --save-dev cypress-cucumber-preprocessor
+  -npm install --save-dev cypress-cucumber-preprocessor
   
   ---- missing cucumber--- TODO fix it
     - npm install --save-dev @cucumber/cucumber
@@ -50,20 +50,29 @@ open a terminal in Visual studio Code and run
 
 After this review the dependencies file (package.json)
 and add some lines
-  "@badeball/cypress-cucumber-preprocessor": {
-    "cucumberJson": {
-      "generate": true,
-      "outputFolder": "cypress/cucumber-json",
-      "filterSpecs": true,
-      "omitFiltered": true,
-      "e2e": {
-        "stepDefinitions": "cypress/support/step_definitions/**/*.{js}"
-      },
-      "onGlobalStepDefinitions": false,
-      "step_definitions": "cypress/e2e/Tests",
-      "filePrefix": "",
-      "fileSuffix": ".cucumber"
-    }
+  {
+  "name": "cucumber_cypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.0.1",
+    "@types/chai": "^5.0.0",
+    "@types/cucumber": "^6.0.1",
+    "cypress": "^13.14.2",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  }, 
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/e2e/Tests"
+  }
+}
 run npm update and fixed any warning by updating packages 
 
 To open Cypress run
@@ -71,4 +80,5 @@ To open Cypress run
   
   
   siguiendo tutorial de https://testgrid.io/blog/cypress-with-cucumber/
-
+  
+  
