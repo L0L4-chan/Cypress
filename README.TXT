@@ -31,6 +31,8 @@
    out: 10.8.2
 
 
+
+
 Once everything is ready we can start a new proyect:
 
 Using Visual Studio Code
@@ -39,6 +41,11 @@ Open Visual Studio and select open folder (Project)
 open a terminal in Visual studio Code and run
   -npm init -y
   -npm install cypress --save-dev
+  
+  ---- missing cucumber--- TODO fix it
+    - npm install --save-dev @cucumber/cucumber
+    - npm i -D cucumber cucumber-tsflow cucumber-pretty ts-node typescript chai
+    - npm i -D @types/cucumber @types/chai
 
 
 To open Cypress run
