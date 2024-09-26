@@ -73,6 +73,17 @@ and add some lines
     "step_definitions": "cypress/e2e/Tests"
   }
 }
+
+And to the cypress.config.jsconst { defineConfig } = require("cypress");
+const cucumber = require("cypress-cucumber-preprocessor").default;
+module.exports = defineConfig({
+ e2e: {
+   specPattern: "**/*.feature",
+   setupNodeEvents(on, config) {
+     on("file:preprocessor", cucumber());
+   },
+ },
+});
 run npm update and fixed any warning by updating packages 
 
 To open Cypress run
