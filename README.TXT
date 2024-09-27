@@ -89,7 +89,9 @@ run npm update and fixed any warning by updating packages
 To open Cypress run
   -npx cypress open
   
+  Based on:
+ https://testgrid.io/blog/cypress-with-cucumber/
   
-  siguiendo tutorial de https://testgrid.io/blog/cypress-with-cucumber/
+
   
   
