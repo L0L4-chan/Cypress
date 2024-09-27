@@ -6,7 +6,7 @@ Given('I am on google.es', () => {
 });
 
 And('the pop up block my access', () => {
-  cy.window().then((win) => {
+  cy.window().then((win) => { //recoge el pop up
     cy.stub(win, 'prompt').returns('gfg');
 });
 });
