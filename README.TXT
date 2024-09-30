@@ -91,7 +91,17 @@ To open Cypress run
   
   Based on:
  https://testgrid.io/blog/cypress-with-cucumber/
-  
+
+
+ notes:
+
+ .gitignore 
+ add 
+ node_modules
+.vscode
+
+From time to time I had to re install cypress
+    -npm install cypress --save-dev
 
   
   
